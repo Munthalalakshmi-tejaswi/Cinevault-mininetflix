@@ -1,2 +1,50 @@
-In this project, the focus is on building a “Mini Netflix App”, a basic yet functional clone of the Netflix user interface.
-🎬 Mini Netflix (CineVault)A lightweight Android application that mimics the core experience of Netflix. Users can view a splash screen, browse a list of trending movies with posters, and watch trailers directly within the app using a custom video player.🛠 Project StructureThe following table outlines the purpose of each file in the codebase:File NameTypeDescriptionSplashActivityJavaThe entry point; displays the logo for 3 seconds.HomeActivityJavaMain menu with Browse, Search, and Profile options.MoviesListActivityJavaDisplays 5 movie posters in a scrollable RecyclerView.MovieDetailActivityJavaLogic for the VideoView to play trailers on click.MovieAdapterJavaBinds movie data (images/text) to the list items.Movie.javaJavaData model supporting Title, Description, Image, and Video.res/rawFolderContains the .mp4 video files for the trailers.res/drawableFolderContains the .jpg/.png posters and icons.🚀 FeaturesDynamic List: Loads 5 unique movies using a RecyclerView.Data Passing: Uses Intent with Serializable objects to pass specific movie data between screens.Video Playback: Integrated VideoView with MediaController for play/pause/seek functionality.Themed UI: Dark mode aesthetic using a black-and-grey color palette to match streaming standards.📽️ Movie CatalogMovie TitleDescriptionPoster ResourceVideo FileBahubaliThe beginning of a legend.bahubali.jpgbahubali.mp4PushpaThe rise of a smuggler.pushpa.webppushpa.mp4JerseyA cricketer's second chance.jersey.webpjersey.mp4ManamA beautiful family story.manam.jpgmanam.mp4RRRA fierce revolutionary tale.rrr.jpgrrr.mp4🔧 Installation & SetupClone the project into Android Studio.Add Media:Place .mp4 files in app/src/main/res/raw/.Place images in app/src/main/res/drawable/.Sync Gradle: Ensure your compileSdk is at least 35.Run: Launch the app on an emulator or physical device.
+# 🎬 Mini Netflix (CineVault)
+
+![Platform](https://img.shields.io/badge/Platform-Android-green)
+![API Level](https://img.shields.io/badge/API-35%2B-blue)
+![License](https://img.shields.io/badge/License-MIT-yellow)
+
+A sleek, dark-themed Android application that allows users to browse a collection of movie trailers and play them instantly. This project demonstrates the use of **RecyclerView**, **Serializable Data Passing**, and **VideoView** integration.
+
+---
+
+## 📱 Features
+* **Splash Screen:** Professional branding with a 3-second delay.
+* **Home Menu:** Navigate between Browsing, Search, and Profile.
+* **Movie Catalog:** A list of 5 curated movies with high-quality posters.
+* **On-Click Playback:** Click any movie to view details and play the trailer.
+* **Integrated Controls:** Built-in Play/Pause/Seek functionality via `MediaController`.
+
+---
+
+## 🛠️ Tech Stack & Architecture
+| Component | Technology |
+| :--- | :--- |
+| **Language** | Java |
+| **UI Layout** | XML (ConstraintLayout & LinearLayout) |
+| **List Handling** | RecyclerView + Custom Adapter |
+| **Video Playback** | VideoView + MediaController |
+| **Build System** | Gradle 8.8.0 |
+
+---
+
+## 📁 Project Structure & Files
+
+
+
+| File | Purpose |
+| :--- | :--- |
+| `SplashActivity.java` | Handles the initial loading screen. |
+| `MoviesListActivity.java` | Manages the list of 5 movies using a RecyclerView. |
+| `MovieDetailActivity.java` | Plays the video and displays descriptions. |
+| `Movie.java` | The Data Model (Serializable) for movie objects. |
+| `res/raw/` | **Critical:** Store your `.mp4` files here. |
+| `res/drawable/` | Store your movie posters (`.jpg`/`.png`) here. |
+
+---
+
+## 🚀 Setup Instructions
+
+1. **Clone the Repo**
+   ```bash
+   git clone [https://github.com/YOUR_USERNAME/Mini-Netflix.git](https://github.com/YOUR_USERNAME/Mini-Netflix.git)
